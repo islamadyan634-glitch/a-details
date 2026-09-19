@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adyan Mobile Detailing | Ipswich</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#07090c;
+color:white;
+}
+header{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#050505,#101820);
+}
+h1{
+font-size:48px;
+margin:0;
+color:#fff;
+}
+h1 span{color:#0799ff}
+header p{
+font-size:20px;
+color:#ccc;
+}
+.btn{
+display:inline-block;
+padding:14px 22px;
+margin:8px;
+background:#0799ff;
+color:#00111d;
+font-weight:bold;
+text-decoration:none;
+border-radius:8px;
+}
+section{padding:60px 20px}
+h2{
+text-align:center;
+font-size:36px;
+color:#0799ff;
+}
+.services{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+}
+.card{
+background:#111820;
+border:1px solid #26313b;
+border-radius:15px;
+padding:25px;
+}
+.card h3{color:#0799ff}
+.price{
+font-size:32px;
+font-weight:bold;
+margin:15px 0;
+}
+.booking{
+max-width:700px;
+margin:auto;
+background:#111820;
+padding:25px;
+border-radius:15px;
+}
+input,select,textarea{
+width:100%;
+padding:14px;
+margin:8px 0 18px;
+border-radius:7px;
+border:1px solid #394550;
+background:#080b0f;
+color:white;
+font-size:16px;
+}
+button{
+width:100%;
+padding:15px;
+background:#0799ff;
+border:0;
+border-radius:8px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+.contact{
+text-align:center;
+background:#0799ff;
+color:#00111d;
+}
+footer{
+text-align:center;
+padding:25px;
+color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ADYAN <span>MOBILE DETAILING</span></h1>
+<p>Professional Mobile Car Detailing • Ipswich & Surrounding Areas</p>
+
+<a class="btn" href="#services">VIEW SERVICES</a>
+<a class="btn" href="#booking">BOOK NOW</a>
+</header>
+
+<section id="services">
+
+<h2>Services & Prices</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Maintenance Valet</h3>
+<p>Exterior safe wash<br>
+Wheels & tyres<br>
+Interior vacuum<br>
+Dash & glass</p>
+<div class="price">£40</div>
+<a class="btn" href="#booking" onclick="choose('Maintenance Valet - £40')">BOOK</a>
+</div>
+
+<div class="card">
+<h3>Full Valet</h3>
+<p>Full exterior wash<br>
+Deep interior vacuum<br>
+Plastics & glass<br>
+Tyre dressing</p>
+<div class="price">£65</div>
+<a class="btn" href="#booking" onclick="choose('Full Valet - £65')">BOOK</a>
+</div>
+
+<div class="card">
+<h3>Interior Deep Clean</h3>
+<p>Seats & carpets shampooed<br>
+Full vacuum<br>
+Plastics & trim<br>
+Odour treatment</p>
+<div class="price">£90</div>
+<a class="btn" href="#booking" onclick="choose('Interior Deep Clean - £90')">BOOK</a>
+</div>
+
+<div class="card">
+<h3>Exterior Detail</h3>
+<p>Snow foam & safe wash<br>
+Wheels & decontamination<br>
+Iron fallout removal<br>
+Wax/sealant protection</p>
+<div class="price">£75</div>
+<a class="btn" href="#booking" onclick="choose('Exterior Detail - £75')">BOOK</a>
+</div>
+
+<div class="card">
+<h3>Full Detail</h3>
+<p>Full interior deep clean<br>
+Exterior decontamination<br>
+Machine polish/gloss enhancement<br>
+Paint sealant</p>
+<div class="price">£120</div>
+<a class="btn" href="#booking" onclick="choose('Full Detail - £120')">BOOK</a>
+</div>
+
+</div>
+</section>
+
+<section id="booking">
+
+<h2>Book Your Detail</h2>
+
+<div class="booking">
+
+<form onsubmit="book(event)">
+
+<label>Name</label>
+<input id="name" required>
+
+<label>Phone Number</label>
+<input id="phone" type="tel" required>
+
+<label>Service</label>
+<select id="service" required>
+<option value="">Choose a service</option>
+<option>Maintenance Valet - £40</option>
+<option>Full Valet - £65</option>
+<option>Interior Deep Clean - £90</option>
+<option>Exterior Detail - £75</option>
+<option>Full Detail - £120</option>
+</select>
+
+<label>Date</label>
+<input id="date" type="date" required>
+
+<label>Preferred Time</label>
+<select id="time" required>
+<option value="">Choose a time</option>
+<option>9:00 AM</option>
+<option>11:00 AM</option>
+<option>1:00 PM</option>
+<option>3:00 PM</option>
+<option>5:00 PM</option>
+</select>
+
+<label>Extra Details</label>
+<textarea id="details" placeholder="Tell us anything we should know about the vehicle..."></textarea>
+
+<button type="submit">REQUEST BOOKING</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+</section>
+
+<section class="contact">
+
+<h2 style="color:#00111d">Contact Adyan</h2>
+
+<p>📞 07533 409899</p>
+<p>✉️ detailsadyan@gmail.com</p>
+
+<a class="btn" href="https://instagram.com/adz_detailing">
+Instagram: @adz_detailing
+</a>
+
+<a class="btn" href="https://www.tiktok.com/@a__details">
+TikTok: a__details
+</a>
+
+</section>
+
+<footer>
+© 2026 Adyan Mobile Detailing • Ipswich
+</footer>
+
+<script>
+
+function choose(service){
+document.getElementById("service").value=service;
+}
+
+const date=document.getElementById("date");
+
+date.addEventListener("change",function(){
+
+let day=new Date(this.value+"T12:00:00").getDay();
+
+if(day>=1 && day<=4){
+alert("Monday to Thursday are fully booked. Please choose Friday, Saturday or Sunday.");
+this.value="";
+}
+
+});
+
+function book(event){
+
+event.preventDefault();
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let service=document.getElementById("service").value;
+let date=document.getElementById("date").value;
+let time=document.getElementById("time").value;
+let details=document.getElementById("details").value;
+
+let subject=encodeURIComponent("New Adyan Mobile Detailing Booking");
+
+let body=encodeURIComponent(
+"NEW BOOKING\n\n"+
+"Name: "+name+"\n"+
+"Phone: "+phone+"\n"+
+"Service: "+service+"\n"+
+"Date: "+date+"\n"+
+"Time: "+time+"\n"+
+"Details: "+details
+);
+
+window.location.href=
+"mailto:detailsadyan@gmail.com?subject="+subject+"&body="+body;
+
+}
+
+</script>
+
+</body>
+</html>
